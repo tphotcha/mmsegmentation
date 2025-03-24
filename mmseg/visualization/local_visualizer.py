@@ -248,8 +248,7 @@ class SegLocalVisualizer(Visualizer):
             dataset_name = 'cityscapes'
         classes = classes if classes else get_classes(dataset_name)
         palette = palette if palette else get_palette(dataset_name)
-        assert len(classes) == len(
-            palette), 'The length of classes should be equal to palette'
+       
         self.dataset_meta: dict = {'classes': classes, 'palette': palette}
 
     @master_only
